@@ -1,7 +1,5 @@
-# Ignore everything in the project root except the .gitignore file
 /*
-
-# Allow .gitignore and README.md files
 !.gitignore
 !README.md
-
+!*.cpp
+!*.gitkeep
