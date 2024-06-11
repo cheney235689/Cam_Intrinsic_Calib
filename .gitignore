@@ -11,6 +11,7 @@
 # Keep all .cc and .h source files
 !*.cc
 !*.h
+!*.cpp
 
 # Keep specific directories and their contents
 !CamCalib/
@@ -43,8 +44,8 @@ CamCalib/x64/
 
 # Specific ignore rules for imgCap subdirectories
 CamCalib/imgCap/Calib_Result/*
-!CamCalib/imgCap/Calib_Result/*.jpg
+#!CamCalib/imgCap/Calib_Result/*.jpg
 #!CamCalib/imgCap/Calib_Result/CamParam.txt
 
 CamCalib/imgCap/ImgSet/*
-!CamCalib/imgCap/ImgSet/*.jpg
+#!CamCalib/imgCap/ImgSet/*.jpg
