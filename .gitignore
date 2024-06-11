@@ -8,44 +8,18 @@
 # Keep all directories (to allow nested .cc, .h, and other specified files)
 */
 
-# Keep all .cc and .h source files
+# Allow C++ source files
+!*.cpp
 !*.cc
 !*.h
-!*.cpp
+!*.hpp
 
-# Keep specific directories and their contents
+# Allow specific directories but ignore their contents
 !CamCalib/
 !CamCalib/imgCap/
 !CamCalib/imgCap/Calib_Result/
 !CamCalib/imgCap/ImgSet/
 
-# Ignore everything in CamCalib directory
-CamCalib/*
-
-# Except .sln file and imgCap subdirectory
-!CamCalib/CamCalib.sln
-!CamCalib/imgCap/
-
-# Ignore everything in imgCap directory
-CamCalib/imgCap/*
-
-# Except .cc, .h files, and specific subdirectories
-!CamCalib/imgCap/*.cc
-!CamCalib/imgCap/*.h
-!CamCalib/imgCap/Calib_Result/
-!CamCalib/imgCap/ImgSet/
-
-# Ignore everything in x64 directory
-CamCalib/x64/
-
-# Except .exe and .pdb files
-!CamCalib/x64/Release/*.exe
-!CamCalib/x64/Release/*.pdb
-
-# Specific ignore rules for imgCap subdirectories
+# Ignore contents of Calib_Result and ImgSet directories
 CamCalib/imgCap/Calib_Result/*
-#!CamCalib/imgCap/Calib_Result/*.jpg
-#!CamCalib/imgCap/Calib_Result/CamParam.txt
-
 CamCalib/imgCap/ImgSet/*
-#!CamCalib/imgCap/ImgSet/*.jpg
