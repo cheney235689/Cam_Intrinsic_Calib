@@ -1,5 +1,12 @@
-/*
-!.gitignore
-!README.md
-!*.cpp
-!*.gitkeep
+.vscode/
+.vs/
+*.tmproj
+*.csproj.user
+*.vbproj.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+*.jph
+*.png
+
