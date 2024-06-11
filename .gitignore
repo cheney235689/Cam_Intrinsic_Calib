@@ -14,12 +14,5 @@
 !*.h
 !*.hpp
 
-# Allow specific directories but ignore their contents
-!CamCalib/
-!CamCalib/imgCap/
-!CamCalib/imgCap/Calib_Result/
-!CamCalib/imgCap/ImgSet/
+!*.gitkeep
 
-# Ignore contents of Calib_Result and ImgSet directories
-CamCalib/imgCap/Calib_Result/*
-CamCalib/imgCap/ImgSet/*
