@@ -1,0 +1,25 @@
+# Ignore everything
+*
+
+# Except these files and directories
+!.gitignore
+!README.md
+
+# Keep all directories (to allow nested .cc, .h, and other specified files)
+*/
+
+# Allow C++ source files
+!*.cpp
+!*.cc
+!*.h
+!*.hpp
+
+# Allow specific directories but ignore their contents
+!CamCalib/
+!CamCalib/imgCap/
+!CamCalib/imgCap/Calib_Result/
+!CamCalib/imgCap/ImgSet/
+
+# Ignore contents of Calib_Result and ImgSet directories
+CamCalib/imgCap/Calib_Result/*
+CamCalib/imgCap/ImgSet/*
