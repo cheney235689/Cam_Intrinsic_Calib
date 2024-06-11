@@ -1,16 +1,11 @@
-# Ignore everything
-*
+# Ignore everything in the project root except the .gitignore file
+/*
 
-# Except these files and directories
-!.gitignore
-!README.md
-
-# Keep all directories (to allow nested .cc, .h, and other specified files)
-*/
+# Allow .gitkeep files
+!.gitkeep
 
 # Allow C++ source files
-!*.cpp
-!*.cc
-!*.h
-!*.hpp
-!*.gitkeep
+**/*.cpp
+**/*.h
+**/*.cc
+**/*.hpp
