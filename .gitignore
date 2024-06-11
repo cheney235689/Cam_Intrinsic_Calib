@@ -5,12 +5,22 @@
 !.gitignore
 !README.md
 
-# Allow .gitkeep files
-!.gitkeep
+# Allow CamCalib directory
+!CamCalib/
 
-# Allow C/C++ source files
-**/*.cpp
-**/*.h
-**/*.cc
-**/*.cpp
-**/*.c
+# Visual Studio
+.vscode/
+.vs/
+*.tmproj
+*.csproj.user
+*.vbproj.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Allow .gitkeep files
+!CamCalib/**/.gitkeep
+
+# Allow C++ source files
+!CamCalib/**/*.cpp
+!CamCalib/**/*.h
