@@ -1,9 +1,16 @@
-# Visual Studio
-.vscode/
-.vs/
-*.tmproj
-*.csproj.user
-*.vbproj.user
-project.lock.json
-project.fragment.lock.json
-artifacts/
+# Ignore everything
+*
+
+# Except these files and directories
+!.gitignore
+!README.md
+
+# Keep all directories (to allow nested .cc, .h, and other specified files)
+*/
+
+# Allow C++ source files
+!*.cpp
+!*.cc
+!*.h
+!*.hpp
+!*.gitkeep
