@@ -8,18 +8,12 @@
 *.userosscache
 *.sln.docstates
 
-# User-specific files (Mono Auto Generated)
-mono_crash.*
-
 # Mono auto generated files
 mono_crash.*
 
 # Visual Studio
 .vscode/
 .vs/
-# Uncomment if you have tasks.json and launch.json in the .vscode folder
-# !.vscode/tasks.json
-# !.vscode/launch.json
 *.tmproj
 *.csproj.user
 *.vbproj.user
@@ -27,23 +21,35 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
+# Ignore build results
+**/bin/
+**/obj/
 
-# Entity Framework
-*_MigrationHistory/
+# Ignore other build directories
+x64/Release/
 
-# Windows image file caches
+# Exception: keep executable and PDB files in release directory
+!x64/Release/*.exe
+!x64/Release/*.pdb
+
+# Ignore log files and intermediate files
+*.log
+*.iobj
+*.ipdb
+*.obj
+*.tlog
+
+# Ignore Windows image file caches
 Thumbs.db
 ehthumbs.db
 
-# Folder config file
+# Ignore folder config file
 Desktop.ini
 
-# Recycle Bin used on file shares
+# Ignore Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Windows shortcuts
+# Ignore Windows shortcuts
 *.lnk
 
 # SQL Server files
@@ -67,23 +73,10 @@ typings/
 
 # NuGet
 *.nupkg
-# The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
-# except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
-
-# Npm package log
-npm-debug.log
-
-# Optional JetBrains Rider directories
-.idea/
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/shelf/
-.idea/**/deployment.xml
-.idea/**/render.xml
 
 # Rider's logs
 .idea/log/
@@ -91,29 +84,19 @@ npm-debug.log
 # Comment to ignore all settings file that can be regenerated
 *.setting
 
-# Exclude all file that can be re-generated 
-*.*
+# Keep the solution file
+!CamCalib.sln
 
-# However include all source files which may be missing 
-!.gitignore
-!.gitattributes
-!.editorconfig
-!.mailmap
-!.assets
-!.gitmodules
+# Keep all source files
+!**/*.cpp
+!**/*.h
+!**/*.hpp
+!**/*.c
 
-# Required DLLs and PDBs
-# Comment the next line if you want to include them in your repository
-*.dll
-*.pdb
+# Ignore CV_PropertySheet.props in imgCap directory
+imgCap/CV_PropertySheet.props
 
-# Exclude private assemblies
-PrivateAssemblies/
-# Uncomment if you want to include them in your repository
-#!PrivateAssemblies/
+# Keep project files except user-specific files
+!**/*.vcxproj
+!**/*.filters
 
-# Exclude "Release" and "Debug" folders
-bin/Release/
-bin/Debug/
-obj/Release/
-obj/Debug/
