@@ -1,11 +1,9 @@
-# Ignore everything in the project root except the .gitignore file
-/*
-
-# Allow .gitkeep files
-!.gitkeep
-
-# Allow C++ source files
-**/*.cpp
-**/*.h
-**/*.cc
-**/*.hpp
+# Visual Studio
+.vscode/
+.vs/
+*.tmproj
+*.csproj.user
+*.vbproj.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
