@@ -13,7 +13,7 @@
 
 int CHECKERBOARD_DIST = 25;// unit:mm
 
-int CHECKERBOARD[2]{ 9 - 1,7 - 1 };// Defining the dimensions of checkerboard
+int CHECKERBOARD[2]{ 9 - 1,7 - 1 };// Defining the dimensions of checkerboard , [m , n] is the noumber of corners
 
 // @brief List all  available camera (max : 10)
 void findAvailableCameras(std::string ResultPath ) {
@@ -108,6 +108,10 @@ int ImgCap(int camIndex,int calibImgsNum , std::string calibImgPath){
 
 }
 
+// @brief Do the intrinsic calibration
+// @param calibImgPath :The path of images
+// @param ResultPath :The path of results(images and matrices )
+// @return :The state of function
 bool IntrinsicCalib(std::string calibImgPath , std::string ResultPath){
 
 	std::vector<std::vector<cv::Point3f> > objpoints;// Creating vector to store vectors of 3D points for each checkerboard image
@@ -231,6 +235,7 @@ bool IntrinsicCalib(std::string calibImgPath , std::string ResultPath){
 	if (!ofs.is_open()) {
 
 		std::cout << "Failed to open file.\n";
+		return false;
 	}
 
 	else {
